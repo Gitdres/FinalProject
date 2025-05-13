@@ -1,6 +1,74 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: "Exploration of New York city's fire department"
 ---
+
+<h1>Group members</h1>
+
+ <p>
+  Andrés Ísak Hlynsson (s242978)
+  Þorvaldur Lúðvíksson (s242975)
+
+  </p>
+
+
+
+
+<section>
+  <h2>Introduction</h2>
+  <p>
+  New York city happens to be the largest city in the United States, home to over 8 million people and it is diveded into five distinct boroughs: Manhattan, Brooklyn, Queens, The Bronx and Staten Island. Each of New York's boroughs is unique in some way or another and seperates itself from the others but does that seperation and variability reach all the way out to the New York's firefighter scene? The New York fire department  is generally known for high competence and reliability which given the vibrant nature of the city it operates in would have to be considered  necessary requirements in order to keep the city fully safe and hospitable. Given all of that however there is certainly a question whether or not that level of safety can be considered the same for each of the five boroughs. After having taken a deep dive into the data that the New York fire department stores, there has been found some evidence which can certainly support the claim that might not necessarily be the case.
+  </p>
+</section>
+
+<section>
+  <h2>instances in which NYPD was called on scene</h2>
+  <p>
+  Perhaps a logical first step when exploring the safeness of  New York's various neighborhoods can be to examine the total instances which have in some way or another involved the NYPD through the years (from 2016 until present day). Looking at figure 1 we can see quite clearly that there is very little difference between the total instances which occur in The Bronx, Manhattan and Queens, but however Brooklyn seperates itself from the rest by having consistantly the most instances from year to year, and Staten Island on the other hand reports by the far the fewest instances. Now this data is still not sufficient in giving a clear analysis for whether or not certain neighborhoods are safer then others due to mainly the fact that there is a big variation in the population for the boroughs.
+  
+  <figure style="margin-bottom: 2em; text-align: center;">
+  <img src="Images/Heatmap1.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.95em; color: #555;">
+    Figure 1: EMS incident heatmap for the Mission District.
+  </figcaption>
+</figure>
+  
+   The population for each borough within New York City is as follows (source: https://www.citypopulation.de/en/usa/newyorkcity/):
+
+ Brooklyn: 2,617,631
+
+Queens: 2,316,841
+
+Manhattan: 1,660,664
+
+The Bronx: 1,384,724
+
+Staten Island: 498,212
+
+Figure 2 however shows another heatmap in which we examine the total instances which have taken place for each borough per 100.000 residents. From there we can see quite another story.  The Bronx has generally the highest amount of instances per 100.000 residents with then Manhattan being in second, Brooklyn in the third and then lastly Staten Island and Queens together in fourth and fifth.
+
+The same results can be noticed in figure 3 and four but by using another visualization tool (the bar chart). Now this data can still not be considered significant in deciding which boroughs can be considerd safer in comparision to one another because there is another far more important variables that need to be considered and that is the actual performance of the New York fire department within the boroughs, which we will examine in the next section.
+
+  </p>
+</section>
+
+<section>
+  <h2>The performance of the New York fire department</h2>
+  <p> After having examined in detail the amount of instances in which the New York fire department has been called onto the scene, it is now time to examine the departments actual performance within each borough. To visualize this data we have decided to use three different types of line plots which show an examination of the dispatch response time (figure 5), incident response time (figure 6) and then lastly incident travel time (figure 7). The dispatch response time is the time  it takes from when a 911 call is received to when unit is assigned. Incident response time is time from when the unit is assigned to when it arrives at the scene, and then travel time is actually a portion of that time. By analyzing these three line plots there are a few noticable things that jump out.The boroughs seem to be diveded into two different teams. The Bronx, Brooklyn as well as Manhattan appear in the top three for the longest response and travel time for all three plots with the Bronx consistently performing the worst. Then Staten Island and Queens consistently perfom better then the other boroughs for every category, especially Staten Island which through every plot seems to have the best performance. </p>
+
+  <div style="margin-bottom: 2em;">
+    <h3>San Francisco crime rate for the years 2004-2024</h3>
+    <img src="images/crimes_per_district_by_year.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
+  </div>
+  </section>
+
+
+  
+
+<section>
+
+<h2> Contribution </h2>
+<p> Andrés: Github website setup, Most of the data interpretation, some coding for the final interactive plot</p>
+<p> Þorvaldur: Most of the work for the python coding for the plots, some data interpretation.</p>
+
+</section>
