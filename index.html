@@ -3,7 +3,7 @@ layout: default
 title: "Exploration of New York city's fire department"
 ---
 
-<h1>Group members</h1>
+<h1>Exploration of New York city's fire department</h1>
 
  <p>
   Andrés Ísak Hlynsson (s242978)
@@ -47,22 +47,74 @@ Staten Island: 498,212
 
 Figure 2 however shows another heatmap in which we examine the total instances which have taken place for each borough per 100.000 residents. From there we can see quite another story.  The Bronx has generally the highest amount of instances per 100.000 residents with then Manhattan being in second, Brooklyn in the third and then lastly Staten Island and Queens together in fourth and fifth.
 
+   <figure style="margin-bottom: 2em; text-align: center;">
+  <img src="Images/Heatmap2.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.95em; color: #555;">
+    Figure 2: EMS incident heatmap per 100.000 residents.
+  </figcaption>
+</figure> 
+
 The same results can be noticed in figure 3 and four but by using another visualization tool (the bar chart). Now this data can still not be considered significant in deciding which boroughs can be considerd safer in comparision to one another because there is another far more important variables that need to be considered and that is the actual performance of the New York fire department within the boroughs, which we will examine in the next section.
 
-  </p>
+   <figure style="margin-bottom: 2em; text-align: center;">
+  <img src="Images/figure_3.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.95em; color: #555;">
+    Figure 3: EMS incident count per borough per year.
+  </figcaption>
+</figure> 
+
+   <figure style="margin-bottom: 2em; text-align: center;">
+  <img src="Images/figure_4.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.95em; color: #555;">
+    Figure 4: EMS incident count per borough per year (per 100.000 residents)
+  </figcaption>
+</figure> 
+
+</p>
 </section>
 
 <section>
   <h2>The performance of the New York fire department</h2>
   <p> After having examined in detail the amount of instances in which the New York fire department has been called onto the scene, it is now time to examine the departments actual performance within each borough. To visualize this data we have decided to use three different types of line plots which show an examination of the dispatch response time (figure 5), incident response time (figure 6) and then lastly incident travel time (figure 7). The dispatch response time is the time  it takes from when a 911 call is received to when unit is assigned. Incident response time is time from when the unit is assigned to when it arrives at the scene, and then travel time is actually a portion of that time. By analyzing these three line plots there are a few noticable things that jump out.The boroughs seem to be diveded into two different teams. The Bronx, Brooklyn as well as Manhattan appear in the top three for the longest response and travel time for all three plots with the Bronx consistently performing the worst. Then Staten Island and Queens consistently perfom better then the other boroughs for every category, especially Staten Island which through every plot seems to have the best performance. </p>
 
-  <div style="margin-bottom: 2em;">
-    <h3>San Francisco crime rate for the years 2004-2024</h3>
-    <img src="images/crimes_per_district_by_year.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
-  </div>
-  </section>
+  <figure style="margin-bottom: 2em; text-align: center;">
+  <img src="Images/lineplot1.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.95em; color: #555;">
+    Figure 5: Lineplot for dispatch response time.
+  </figcaption>
+</figure> 
 
 
+  <figure style="margin-bottom: 2em; text-align: center;">
+  <img src="Images/lineplot2.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.95em; color: #555;">
+    Figure 6: Lineplot for incident response time.
+  </figcaption>
+</figure> 
+
+
+  <figure style="margin-bottom: 2em; text-align: center;">
+  <img src="Images/lineplot3.png" alt="Mission District crime scene" style="max-width:100%; height:auto;">
+  <figcaption style="margin-top: 0.5em; font-size: 0.95em; color: #555;">
+    Figure 7: Lineplot for incident travel time.
+  </figcaption>
+</figure> 
+
+<!-- Plot container -->
+<div id="safety-rank-container"></div>
+
+<!-- BokehJS -->
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.7.1.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.7.1.min.js"></script>
+
+<!-- Embed plot from JSON -->
+<script>
+  fetch("safety_rank_plot.json")
+    .then(response => response.json())
+    .then(item => {
+      Bokeh.embed.embed_item(item);
+    });
+</script>
   
 
 <section>
