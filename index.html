@@ -3,6 +3,31 @@ layout: default
 title: "Exploration of New York city's fire department"
 ---
 
+<style>
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  section {
+    margin-bottom: 3em;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+</style>
+
+<div class="container">
+
 <h1>Exploration of New York city's fire department</h1>
 
  <p>
@@ -22,7 +47,7 @@ title: "Exploration of New York city's fire department"
 </section>
 
 <section>
-  <h2>instances in which NYPD was called on scene</h2>
+  <h2>Instances in which NYPD was called on scene</h2>
   <p>
   Perhaps a logical first step when exploring the safeness of  New York's various neighborhoods can be to examine the total instances which have in some way or another involved the NYPD through the years (from 2016 until present day). Looking at figure 1 we can see quite clearly that there is very little difference between the total instances which occur in The Bronx, Manhattan and Queens, but however Brooklyn seperates itself from the rest by having consistantly the most instances from year to year, and Staten Island on the other hand reports by the far the fewest instances. Now this data is still not sufficient in giving a clear analysis for whether or not certain neighborhoods are safer then others due to mainly the fact that there is a big variation in the population for the boroughs.
   
@@ -100,6 +125,14 @@ The same results can be noticed in figure 3 and four but by using another visual
   </figcaption>
 </figure> 
 
+<section>
+
+  <h2>Interacting with the data</h2>
+
+  
+
+
+
 <!-- Plot container -->
 <div id="safety-rank-container"></div>
 
@@ -115,7 +148,42 @@ The same results can be noticed in figure 3 and four but by using another visual
       Bokeh.embed.embed_item(item);
     });
 </script>
-  
+
+<!-- Plot container -->
+<div id="severity-plot-container"></div>
+
+<!-- BokehJS -->
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.7.1.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.7.1.min.js"></script>
+
+<!-- Embed plot from JSON -->
+<script>
+  fetch("severity_plot.json")
+    .then(response => response.json())
+    .then(item => {
+      Bokeh.embed.embed_item(item);
+    });
+</script>
+
+<!-- Plot container -->
+<div id="last-plot-container"></div>
+
+<!-- BokehJS -->
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.7.1.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.7.1.min.js"></script>
+
+<!-- Embed plot from JSON -->
+<script>
+  fetch("last_plot.json")
+    .then(response => response.json())
+    .then(item => {
+      Bokeh.embed.embed_item(item);
+    });
+</script>
+
+
+ 
+</section>
 
 <section>
 
@@ -124,3 +192,5 @@ The same results can be noticed in figure 3 and four but by using another visual
 <p> Þorvaldur: Most of the work for the python coding for the plots, some data interpretation.</p>
 
 </section>
+
+</div>
