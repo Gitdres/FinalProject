@@ -1,7 +1,4 @@
----
-layout: default
-title: "Exploration of New York city's fire department"
----
+
 
 <style>
   .container {
@@ -60,15 +57,15 @@ title: "Exploration of New York city's fire department"
   
    The population for each borough within New York City is as follows (source: https://www.citypopulation.de/en/usa/newyorkcity/):
 
- Brooklyn: 2,617,631
+ Brooklyn: 2,617,631, 
 
-Queens: 2,316,841
+Queens: 2,316,841, 
 
-Manhattan: 1,660,664
+Manhattan: 1,660,664, 
 
-The Bronx: 1,384,724
+The Bronx: 1,384,724, 
 
-Staten Island: 498,212
+Staten Island: 498,212.
 
 Figure 2 however shows another heatmap in which we examine the total instances which have taken place for each borough per 100.000 residents. From there we can see quite another story.  The Bronx has generally the highest amount of instances per 100.000 residents with then Manhattan being in second, Brooklyn in the third and then lastly Staten Island and Queens together in fourth and fifth.
 
@@ -129,7 +126,7 @@ The same results can be noticed in figure 3 and four but by using another visual
 
   <h2>Interacting with the data</h2>
 
-  
+  <p>Here below is an interactive plot which shows how the bouroughs rank against one another in terms of safety. The variables that were used for this interactive plot are the same ones that appear in the line plots above (dispatch response time, incident response time and travel time). Now the interactive plot does show that Staten Island is for the most part the safest borough in terms of the department's performance (although there is a dive around covid 2020-2021). Queens then ranks the second highest after Staten Island while the rest of the three boroughs trade places between years but generally always rank behind the other two.</p>
 
 
 
@@ -149,6 +146,9 @@ The same results can be noticed in figure 3 and four but by using another visual
     });
 </script>
 
+<p>For the next interactive plot we examine something that is quite different. All of the incidences when the New York firedepartment has to be called out, are ranked based on the severity of the incidence (1 being the highest and 8 being the lowest). The interactive plot below shows us that generally the proortions for every "severity-grade" remains the same for the bouroughs.</p>
+
+
 <!-- Plot container -->
 <div id="severity-plot-container"></div>
 
@@ -164,6 +164,8 @@ The same results can be noticed in figure 3 and four but by using another visual
       Bokeh.embed.embed_item(item);
     });
 </script>
+
+<p> Lastly, the interactive plot below shows a bar chart for the total incidences that occur within each bourough and we can see that there is very little difference in between years, the proportions generally always reamin the same for the boroughs.</p>
 
 <!-- Plot container -->
 <div id="last-plot-container"></div>
@@ -184,6 +186,14 @@ The same results can be noticed in figure 3 and four but by using another visual
 
  
 </section>
+
+<section>
+
+<h2>Conclusion</h2>
+<p>After having analyzed the data it is in our opinion rather safe to say that Staten Island is safest of all the boroughs while The Bronx seem on the other hand to be the least safest. The main reasoning for this conclusion is twofolded. Firstly The Bronx performs by far the worst of all the boroughs when looking at the inciden rate per 100.000 residents (and Staten Island performs rather well however). Secondly the fire department does generally perform the worst in The Bronx (see figures 5,6 and 7), while it does however perform by far the best in Staten Island. The rest of the boroughs (Brooklyn, Manhattan and Queens) rank somewhere in between and it is rather subjective in which spot one would choose to rank these boroughs specifically. That is to say it would be depented on how much emphazis should be put on the amount of incidences against the departments performance within the boroughs.  </p>
+</section>
+
+</div>
 
 <section>
 
